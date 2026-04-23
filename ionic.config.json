@@ -1,7 +1,8 @@
 {
   "name": "appPruebaAcce",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular-standalone"
 }
