@@ -1,0 +1,7 @@
+{
+  "name": "appPruebaAcce",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
