@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "359331865365",
+    "project_id": "apppruebaacce",
+    "storage_bucket": "apppruebaacce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359331865365:android:90df2c5fc2cbedd778bf1c",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUw2_TBWTztiom00j7x--OK4sZgiG4G7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

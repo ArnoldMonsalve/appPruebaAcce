@@ -32,7 +32,7 @@
         <ion-button color="primary" (click)="openEditModal(cat)">
           <ion-icon name="pencil" slot="icon-only"></ion-icon>
         </ion-button>
-        <ion-button color="danger" (click)="openConfirmModal(cat)">
+        <ion-button *ngIf="showDelete" color="danger" (click)="openConfirmModal(cat)">
           <ion-icon name="trash" slot="icon-only"></ion-icon>
         </ion-button>
       </ion-buttons>

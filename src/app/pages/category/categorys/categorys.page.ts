@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavController } from '@ionic/angular';
-
 import {
   IonHeader, IonToolbar, IonTitle, IonContent, IonButton,
   IonList, IonItem, IonLabel, IonInput, IonModal, IonButtons,
@@ -13,6 +12,7 @@ import { addIcons } from 'ionicons';
 import { trash, pencil, add } from 'ionicons/icons';
 import { CategoryDto } from 'src/app/models/category.model';
 import { CategoryService } from 'src/app/services/category';
+import { ConfigService } from 'src/app/services/config';
 
 @Component({
   selector: 'app-categorys',
@@ -34,6 +34,7 @@ export class CategorysPage implements OnInit {
   editId?: number;
   editName: string = '';
 
+  showDelete: boolean = true;//para validar el remote config de firebase
   isConfirmModalOpen = false;
   categoryToDelete: CategoryDto | null = null;
 
@@ -42,6 +43,7 @@ export class CategorysPage implements OnInit {
     private toastController: ToastController,
     private platform: Platform,
     private navCtrl: NavController,
+    private ConfigService : ConfigService
   ) {
     addIcons({ trash, pencil, add });
   }
@@ -52,8 +54,10 @@ export class CategorysPage implements OnInit {
     });
   }
 
-  ionViewWillEnter() {
+  async ionViewWillEnter() {
     this.loadCategories();
+    this.showDelete = await this.ConfigService.canDelete();
+    console.log('¿Botón eliminar activo?:', this.showDelete);
   }
 
   loadCategories() {
