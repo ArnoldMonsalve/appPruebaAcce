@@ -1,5 +1,4 @@
 # Aplicación móvil híbrida desarrollada con Ionic + Angular, diseñada para la gestión eficiente de tareas mediante clasificación categórica y control dinámico de funciones desde la nube.
-
 ## Entorno
 * Frameworks: Ionic Framework (ultima versión) con Angular.
 * Bridge Nativo: Capacitor & Cordova Plugins para acceso a hardware y servicios del sistema.
