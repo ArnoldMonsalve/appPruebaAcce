@@ -2,7 +2,7 @@
 ## Requisitos instalados
 * Node.js
 * Ionic CLI
-* Cordova
+* Cordova Plugins y Capacitor
 * Java JDK 17 y variables de entorno configuradas.
 * Android Studio panda 3 con SDK Tools configurados.
 
