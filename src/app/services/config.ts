@@ -8,7 +8,6 @@ export class ConfigService {
 
   constructor(private remoteConfig: RemoteConfig) {
     // Esto hace que la app busque cambios en Firebase cada 10 segundos
-    // (Ideal para que pruebes rápido el interruptor en la consola)
     this.remoteConfig.settings.minimumFetchIntervalMillis = 10000;
   }
 
@@ -27,7 +26,6 @@ export class ConfigService {
       return value.asBoolean();
     } catch (error) {
       console.error('Error al obtener Remote Config:', error);
-      // Si algo falla (ej. no hay internet), devolvemos true por defecto
       return true;
     }
   }
